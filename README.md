@@ -33,10 +33,31 @@ An interactive, responsive To-Do application styled with a Cyber-Y2K / Neo-Bruta
 
 ---
 
-## Live Demo Links
-- [Task1 Calculator](https://devvsakib.github.io/oasis-infobyte/Task1)
-- [Task2 Tribute Page](https://devvsakib.github.io/oasis-infobyte/Task2)
-- [Task3 Todo WebApp](https://devvsakib.github.io/oasis-infobyte/Task3)
+## Vercel Live Demo Links
+- [Task1 Calculator on Vercel](https://luthfi-task1.vercel.app)
+- [Task2 Tribute Page on Vercel](https://luthfi-task2.vercel.app)
+- [Task3 Todo WebApp on Vercel](https://luthfi-task3.vercel.app)
+
+---
+
+## Deploy to Vercel
+
+Each task is configured for deployment to Vercel as a separate static project.
+
+To deploy from the CLI:
+1. Install the Vercel CLI if needed: `npm install -g vercel`
+2. Log in with `vercel login`
+3. Deploy each task folder separately:
+   - `cd Luthfi_Task1 && vercel --prod`
+   - `cd ../Luthfi_Task2 && vercel --prod`
+   - `cd ../Luthfi_Task3 && vercel --prod`
+
+If you prefer the Vercel dashboard, create three projects and set the root directory for each project to:
+- `Luthfi_Task1`
+- `Luthfi_Task2`
+- `Luthfi_Task3`
+
+Each folder already includes a `vercel.json` file so Vercel will serve the static HTML/CSS/JS files correctly.
 
 ---
 

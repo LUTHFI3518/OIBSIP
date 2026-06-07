@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Simple To-Do WebApp</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <div class="todo-container">
+    <div class="todo-card">
+      <header class="todo-header">
+        <h1>TASK LIST</h1>
+      </header>
+
+      <div class="input-section">
+        <input type="text" id="addNote" placeholder="ENTER A NEW TASK...">
+        <button id="inputTask">ADD</button>
+      </div>
+
+      <main class="todo-body">
+        <section class="list-section">
+          <h2>PENDING TASKS</h2>
+          <div id="pushNote" class="task-list"></div>
+        </section>
+
+        <section class="list-section">
+          <h2>COMPLETED TASKS (<span id="completedNumber">0</span>)</h2>
+          <div id="pushComplete" class="task-list completed-list"></div>
+        </section>
+      </main>
+    </div>
+  </div>
+
+  <script src="app.js"></script>
+</body>
+</html>

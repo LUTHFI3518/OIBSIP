@@ -1,0 +1,242 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background: radial-gradient(circle at 80% 20%, rgba(255, 0, 127, 0.12) 0%, transparent 50%), 
+              radial-gradient(circle at 20% 80%, rgba(0, 240, 255, 0.12) 0%, transparent 50%), 
+              #0c0c10;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  padding: 20px;
+  font-family: 'Inter', sans-serif;
+}
+
+.todo-container {
+  width: 100%;
+  max-width: 480px;
+}
+
+.todo-card {
+  background-color: #171722;
+  border: 3px solid #000000;
+  border-radius: 16px;
+  padding: 28px 24px;
+  box-shadow: 8px 8px 0px #000000;
+}
+
+.todo-header h1 {
+  font-family: 'Space Grotesk', sans-serif;
+  color: #00f0ff;
+  font-size: 2.25rem;
+  font-weight: 700;
+  margin-bottom: 24px;
+  text-align: center;
+  letter-spacing: 2px;
+  text-shadow: 3px 3px 0px #ff007f, 5px 5px 0px #000000;
+}
+
+.input-section {
+  display: flex;
+  gap: 12px;
+  margin-bottom: 30px;
+}
+
+#addNote {
+  flex: 1;
+  height: 52px;
+  background-color: #20202e;
+  border: 3px solid #000000;
+  border-radius: 10px;
+  color: #ffffff;
+  font-family: 'Space Grotesk', sans-serif;
+  font-size: 1rem;
+  font-weight: 500;
+  padding: 0 16px;
+  outline: none;
+  box-shadow: inset 2px 2px 0px rgba(0,0,0,0.5);
+  transition: border-color 0.2s;
+}
+
+#addNote::placeholder {
+  color: #66667a;
+}
+
+#addNote:focus {
+  border-color: #00f0ff;
+}
+
+#inputTask {
+  height: 52px;
+  background-color: #ff007f;
+  border: 3px solid #000000;
+  border-radius: 10px;
+  color: #ffffff;
+  font-family: 'Space Grotesk', sans-serif;
+  font-size: 1.1rem;
+  font-weight: 700;
+  padding: 0 24px;
+  cursor: pointer;
+  box-shadow: 4px 4px 0px #000000;
+  transition: all 0.15s ease;
+}
+
+#inputTask:hover {
+  transform: translate(-2px, -2px);
+  box-shadow: 6px 6px 0px #000000;
+  background-color: #ff2e96;
+}
+
+#inputTask:active {
+  transform: translate(2px, 2px);
+  box-shadow: 1px 1px 0px #000000;
+}
+
+.todo-body {
+  display: flex;
+  flex-direction: column;
+  gap: 28px;
+}
+
+.list-section h2 {
+  font-family: 'Space Grotesk', sans-serif;
+  color: #ffffff;
+  font-size: 1.25rem;
+  font-weight: 700;
+  margin-bottom: 14px;
+  letter-spacing: 1px;
+}
+
+.task-list {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.empty-message {
+  color: #555566;
+  font-size: 0.95rem;
+  font-style: italic;
+  padding: 8px 0;
+  font-family: 'Space Grotesk', sans-serif;
+}
+
+.todo-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #20202e;
+  border: 3px solid #000000;
+  border-radius: 12px;
+  padding: 14px 18px;
+  gap: 12px;
+  box-shadow: 4px 4px 0px #000000;
+  transition: all 0.2s ease;
+}
+
+.todo-item:hover {
+  transform: translate(-2px, -2px);
+  box-shadow: 6px 6px 0px #000000;
+}
+
+.task-info {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+  gap: 6px;
+}
+
+.task-text {
+  color: #ffffff;
+  font-size: 1rem;
+  font-weight: 500;
+  word-break: break-all;
+}
+
+.task-time {
+  font-family: 'Space Grotesk', sans-serif;
+  font-size: 0.72rem;
+  color: #888899;
+}
+
+.button-group {
+  display: flex;
+  gap: 8px;
+}
+
+.btn-icon {
+  width: 34px;
+  height: 34px;
+  border: 2px solid #000000;
+  border-radius: 8px;
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 0.95rem;
+  font-weight: 700;
+  box-shadow: 2px 2px 0px #000000;
+  transition: all 0.15s ease;
+}
+
+.btn-icon:hover {
+  transform: translate(-1px, -1px);
+  box-shadow: 3px 3px 0px #000000;
+}
+
+.btn-icon:active {
+  transform: translate(2px, 2px);
+  box-shadow: 0px 0px 0px #000000;
+}
+
+.btn-check {
+  background-color: #39ff14;
+  color: #000000;
+}
+
+.btn-edit {
+  background-color: #00f0ff;
+  color: #000000;
+}
+
+.btn-delete {
+  background-color: #ff007f;
+  color: #ffffff;
+}
+
+.completed-list .todo-item {
+  background-color: #171722;
+  border-color: #444455;
+  box-shadow: 2px 2px 0px #000000;
+  opacity: 0.6;
+}
+
+.completed-list .todo-item:hover {
+  transform: none;
+  box-shadow: 2px 2px 0px #000000;
+}
+
+.completed-list .task-text {
+  text-decoration: line-through;
+  color: #888899;
+}
+
+.completed-list .task-time {
+  color: #666677;
+}
+
+.completed-list .btn-icon {
+  background-color: #2a2a35;
+  border-color: #444455;
+  color: #888899;
+  box-shadow: 1px 1px 0px #000000;
+}
+
+.completed-list .btn-icon:hover {
+  transform: none;
+  box-shadow: 1px 1px 0px #000000;
+}

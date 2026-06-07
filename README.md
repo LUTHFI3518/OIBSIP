@@ -40,27 +40,6 @@ An interactive, responsive To-Do application styled with a Cyber-Y2K / Neo-Bruta
 
 ---
 
-## Deploy to Vercel
-
-Each task is configured for deployment to Vercel as a separate static project.
-
-To deploy from the CLI:
-1. Install the Vercel CLI if needed: `npm install -g vercel`
-2. Log in with `vercel login`
-3. Deploy each task folder separately:
-   - `cd Luthfi_Task1 && vercel --prod`
-   - `cd ../Luthfi_Task2 && vercel --prod`
-   - `cd ../Luthfi_Task3 && vercel --prod`
-
-If you prefer the Vercel dashboard, create three projects and set the root directory for each project to:
-- `Luthfi_Task1`
-- `Luthfi_Task2`
-- `Luthfi_Task3`
-
-Each folder already includes a `vercel.json` file so Vercel will serve the static HTML/CSS/JS files correctly.
-
----
-
 ## How to Run the Projects
 
 To run any of the tasks locally:
